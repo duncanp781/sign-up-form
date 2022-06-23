@@ -5,19 +5,33 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="left">
+    <!-- <img src="images/side-image.jpg" id = 'side-image'> -->
+    <div class = 'logo'>
+      <!-- <img src = 'images/odin-lined.png' id="logo"> -->
+      <div class="logo-text">
+        Odin
+      </div>
+    </div>
 
 
+    <div class="credit">
+        Photo by <a href="https://unsplash.com/@visaxslr?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Visax</a> on <a href="https://unsplash.com/t/experimental?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+    </div>
+  
   </div>
   <div class="right">
-    <p class="text">This is not a real online service! You know you need something like this in your life to help you realize your deepst dreams. Sign up <em>now</em> to get started.
-    </p>
-    <p>You <em>know</em> you want to.</p>
+    <div class="text">
+      <p class="main-text">This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up <em>now</em> to get started.
+      </p>
+      <p class = "subtext">You <em>know</em> you want to.</p>
+    </div>
     <div class="form-area">
-      <form action="">
-        <fieldset class = 'styled-area'>
+      <form action="" id = 'form'>
+        <fieldset>
           <legend>Let's do this!</legend>
 
           <div class="name">
@@ -44,9 +58,10 @@
             <input type="password" name="password" id="confirm-password">
           </div>
         </fieldset>
-        <button type="submit">Create Account</button>
-        <span>Already have an account? <a>Log in</a></span>
+
       </form>
+      <button type="submit" for = 'form' id = 'create-account'>Create Account</button>
+      <p type='log-in'>Already have an account? <a>Log in</a></p>
     </div>
 
   </div>
