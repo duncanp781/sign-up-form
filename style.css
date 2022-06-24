@@ -7,50 +7,82 @@
   font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
   --right-margin: 32px;
+
+  --blue-color: rgb(37, 213, 248);
 }
 html{
-  height: 100%;
+  height: 100vh;
   width: 100%;
   padding: 0px;
   margin: 0px;
+  overflow: hidden;
+  box-sizing: border-box;
 }
 body{
   display: flex;
   background-color: darkslategray;
   width: 100%;
   height: 100%;
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 
 .left{
-  width: 40vw;
+  width: 40%;
   height: 100%;
+  position: relative;
 }
 
 
+#side-image{
+  height: 100%;
+  width: 100%;
+}
+
+.logo{
+  position: absolute;
+  top: 30%;
+  transform: translateY(-50%);
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px 0px;
+}
+.credit{
+  position: absolute;
+  bottom: 0%;
+}
+
 .right{
-  background-color:rgb(119, 136, 153);
+  overflow: auto;
+  position: relative;
+  background-color:rgb(157, 172, 186);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
   height: 100%;
+  width: 60%;
 
 }
 
 button, input, select, textarea {
   font-family: inherit;
   font-size: 100%;
-  width : 150px;
+  width : 200px;
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
 }
 
 .text{
   margin: var(--right-margin);
-  font-size: 18px;
+  font-size: 1.5rem;
   font-weight: bold;
+  max-width: 50rem;
 }
 
 .logo{
@@ -64,23 +96,29 @@ button, input, select, textarea {
 
 .logo-text{
   font-family: 'Norse-Bold', serif;
-  font-size: 2.5rem;
+  font-size: 5rem;
+  color: white;
+
 }
 
 .form-area{
   width: 100%;
   margin: 0px;
-}
-form{
-  width: 100%;
-  margin: 0px;
+  height: 100%;
   background-color: white;
+  box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.15);
+}
+
+form{
+  width: fit-content;
+  height: min(15rem, 75%);
+  margin: 0px;
   padding: var(--right-margin);
 }
 
 fieldset{
 
-  width: 100%;
+  width: fit-content;
   margin: 0px;
   border-style: none;
   display: flex;
@@ -92,10 +130,11 @@ fieldset legend{
 }
 
 fieldset div{
+  width: fit-content;
   font-size: 0.7rem;
   text-transform: uppercase;
   display: flex;
-  margin:4px 64px 0px 0px;
+  gap: 4px 64px;
 }
 
 fieldset div label{
@@ -105,7 +144,6 @@ fieldset div label{
 .input{
   display: flex;
   flex-direction: column;
-  box-sizing: border-box;
 }
 
 input{
@@ -118,12 +156,20 @@ input{
 
 input:focus{
   outline: none;
-  border: 2px solid rgb(121, 121, 255);
+  border-color: rgb(0,0,0,0);
+  box-shadow: 0px 0px 0px 2px var(--blue-color), 3px 3px 4px rgba(0, 0, 0, 0.208);
 }
 
 input.error,
 input:invalid{
-  border-color: red;
+  border-color: rgb(0,0,0,0);
+  box-shadow: 0px 0px 0px 1px red;
+}
+
+input.error:focus,
+input:invalid:focus{
+  border-color: rgb(0,0,0,0);
+  box-shadow: 0px 0px 0px 2px red , 3px 3px 4px rgba(0, 0, 0, 0.208);
 }
 
 #password.error+span::after,
@@ -134,10 +180,28 @@ input:invalid{
   text-transform: none;
 }
 
+button{
+  width: fit-content;
+  border-style: none;
+  background-color: var(--blue-color);
+  padding: 16px 24px;
+  border-radius: 10px;
+  white-space: nowrap;
+}
+
+button:active{
+  background-color:  rgb(26, 156, 182);;
+}
+
+
 #create-account{
   margin: var(--right-margin);
 }
 
 #log-in{
   margin: var(--right-margin);
+}
+
+a{
+  text-decoration: none;
 }
