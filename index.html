@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
   <div class="left">
@@ -30,38 +31,52 @@
       <p class = "subtext">You <em>know</em> you want to.</p>
     </div>
     <div class="form-area">
-      <form action="" id = 'form'>
+      <form action="." id = 'form'>
         <fieldset>
           <legend>Let's do this!</legend>
 
           <div class="name">
-            <label for="first-name">First Name</label>
-            <input type="text" id="first-name">
+            <div class="input">
+              <label for="first-name">First Name</label>
+              <input type="text" id="first-name">
+            </div>
 
-            <label for="last-name">Last Name</label>
-            <input type="text" id="last-name">
+            
+            <div class="input">
+              <label for="last-name">Last Name</label>
+              <input type="text" id="last-name">
+            </div>
           </div>
 
           <div class="info">
-            <label for="email">Email</label>
-            <input type="email" id = 'email'>
+            <div class="input">
+              <label for="email">Email</label>
+              <input type="email" id = 'email'>
+            </div>
             
-            <label for="number">Phone Number</label>
-            <input type="tel" id = 'number'>
+            <div class="input">
+              <label for="number">Phone Number</label>
+              <input type="tel" id = 'number'>
+            </div>
           </div>
 
           <div class="password">
-            <label for="password">Password</label>
-            <input type="password" name="password" id="password">
+            <div class="input">
+              <label for="password">Password</label>
+              <input type="password" name="password" id="password" required class = 'error'>
+              <span></span>
+            </div>
 
-            <label for="confirm-password">Confirm Password</label>
-            <input type="password" name="password" id="confirm-password">
+            <div class="input">
+              <label for="confirm-password">Confirm Password</label>
+              <input type="password" name="password" id="confirm-password" required class = 'error'>
+            </div>
           </div>
         </fieldset>
 
       </form>
-      <button type="submit" for = 'form' id = 'create-account'>Create Account</button>
-      <p type='log-in'>Already have an account? <a>Log in</a></p>
+      <button type="submit" for = 'form' id = 'create-account' >Create Account</button>
+      <p id='log-in'>Already have an account? <a>Log in</a></p>
     </div>
 
   </div>
